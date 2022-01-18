@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- <link rel="stylesheet" href="styles.css" /> -->
+      <link
+         rel="stylesheet"
+         type="text/css"
+         href="{{ url_for('static',filename='styles/styles.css') }}"
+      />
+      <title>WRONG!</title>
+   </head>
+   <body class="wrong">
+      <h1>WRONG</h1>
+      <form action="/letter">
+         <button type="submit">Try Again</button>
+      </form>
+      <p class="score">Score: {{score}} / {{total}}</p>
+   </body>
+</html>

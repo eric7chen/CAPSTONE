@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!-- <link rel="stylesheet" href="styles.css" /> -->
+      <link
+         rel="stylesheet"
+         type="text/css"
+         href="{{ url_for('static',filename='styles/styles.css') }}"
+      />
+      <title>CORRECT</title>
+   </head>
+   <body class="correct">
+      <div class="right">
+         <h1 style="padding-bottom: 0px; margin-bottom: 0px">CORRECT</h1>
+         <form action="/letter" class="right1" style="padding-top: 0px">
+            <button type="submit">Try Again</button>
+         </form>
+         <p class="score">Score: {{score}} / {{total}}</p>
+      </div>
+   </body>
+</html>
