@@ -36,7 +36,5 @@ public class ParseCsv {
                 System.err.println(e.toString());
             }
         }
-
-
     }
 }
