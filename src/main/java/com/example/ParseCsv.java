@@ -1,6 +1,7 @@
 package com.example;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -28,14 +29,12 @@ public class ParseCsv {
            }
            reader.close();
            
-           for (List<String> record : records) {
-               for (String entry : record) {
-                   System.out.print(entry + ",");
-               }
-               System.out.print("\n");
-           }
         } catch (IOException e) {
-            System.err.println(e.toString());
+            if (e.getClass() == FileNotFoundException.class) {
+                System.err.println("no such file");
+            } else {
+                System.err.println(e.toString());
+            }
         }
 
 
